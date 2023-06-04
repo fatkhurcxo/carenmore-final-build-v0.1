@@ -1,0 +1,248 @@
+/*==================================================================================
+    Custom Stylesheet (Any custom styling you want to apply should be defined here).
+====================================================================================*/
+
+/* Animation Simple */
+@keyframes heartbeat {
+    0% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+        transform-origin: center center;
+    }
+
+    10% {
+        animation-timing-function: ease-in;
+        transform: scale(0.91);
+    }
+
+    17% {
+        animation-timing-function: ease-out;
+        transform: scale(0.98);
+    }
+
+    33% {
+        animation-timing-function: ease-in;
+        transform: scale(0.87);
+    }
+
+    45% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+}
+
+@keyframes tittle-frames {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes bounce-img {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateX(-48px);
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateX(-26px);
+    }
+
+    65% {
+        animation-timing-function: ease-in;
+        transform: translateX(-13px);
+    }
+
+    82% {
+        animation-timing-function: ease-in;
+        transform: translateX(-6.5px);
+    }
+
+    93% {
+        animation-timing-function: ease-in;
+        transform: translateX(-4px);
+    }
+
+    25%,
+    55%,
+    75%,
+    87%,
+    98% {
+        animation-timing-function: ease-out;
+        transform: translateX(0px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Font Preferences */
+@font-face {
+    font-family: 'Hemi Head';
+    src: url('../../fonts/HemiHeadRg-BoldItalic.ttf')format('truetype'),
+        url('../../fonts/HemiHeadRg-BoldItalic.woff')format('woff'),
+        url('../../fonts/HemiHeadRg-BoldItalic.woff2')format('woff2');
+}
+
+/* Background */
+.login-body {
+    min-height: 100vh;
+    background-image: url('../img/banner/augustine-wong-PxypFiQMkIk-unsplash.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-shape-login {
+    background: url(../img/banner/login-bg.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.login-page-main {
+    border-radius: 5px;
+}
+
+.login-title {
+    font-family: 'Hemi Head';
+    position: absolute;
+    top: 35%;
+    z-index: 999;
+    font-weight: 900;
+    background: #984DFF;
+    background: repeating-linear-gradient(to right, #984DFF 0%, #FFFFFF 70%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 18px 25px rgba(152, 77, 255, 0.69);
+    padding-right: 5px;
+    animation: tittle-frames 10s ease-out 0s infinite alternate both;
+}
+
+.img-container {
+    position: absolute;
+    bottom: 18%;
+}
+
+.img-container img {
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+    animation: bounce-img 10s ease-in 0s infinite alternate forwards;
+}
+
+/* Input Style */
+input::placeholder {
+    font-size: small;
+}
+
+#input-field {
+    font-size: small;
+}
+
+/* O-Style-Input */
+.valid-img {
+    width: 10%;
+    height: inherit;
+}
+
+.valid-pass {
+    background-image: none;
+    width: 10%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: inherit;
+}
+
+input:required:valid+.valid-img {
+    background: url('../img/icons/check.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* register */
+input[type="password"]:required:valid+.valid-pass {
+    background: url('../img/icons/eye.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+input[type="text"]:required:valid+.valid-pass {
+    background: url('../img/icons/eye.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.o-style-input {
+    /* spacing */
+    margin-bottom: 2%;
+    /* end spacing */
+    border-bottom: 1px solid purple;
+    border-radius: 5px 5px 0px 0px;
+    background-color: transparent;
+    display: flex;
+    height: 45px;
+}
+
+.o-label {
+    flex-basis: 10%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+.o-input {
+    height: inherit;
+    flex-basis: 90%;
+    border: none;
+    background-color: transparent;
+    font-size: small;
+}
+
+/* Section Style */
+.row-container {
+    height: max-content;
+}
+
+.back-login:hover a i {
+    color: #a600ff;
+}
+
+.remember-me {
+    transition: all 0.5s ease 0s;
+}
+
+.remember-me:hover {
+    transform: scale(1.05);
+}
+
+.lupa-password a {
+    transition: all 0.2s ease-in 0.2s;
+}
+
+.lupa-password:hover a {
+    font-weight: bold;
+}

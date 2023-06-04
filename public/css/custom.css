@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa&family=Cutive+Mono&family=Dongle&family=Lexend+Deca&family=Poppins&family=Unlock&family=Unna&family=Vidaloka&display=swap');
+/* THIS IS ADDITIONAL STYLE FOR ADMIN PAGE */
+
+.card-layanan {
+    transition: all 0.5s ease 0s;
+}
+
+.card-layanan:hover {
+    border: 1px solid #728ff7;
+    transform: scale(1.05);
+}
+
+.dropdown-toggle:after {
+    content: none;
+}
+
+.dropdown-item {
+    transition: all 0.5s ease 0s;
+    border-bottom: transparent;
+}
+
+.dropdown-item:hover {
+    color: #728ff7;
+    padding-left: 30px;
+    background-color: white;
+    font-weight: bold;
+    background-color: rgb(240, 240, 240);
+}
+
+#updated-layanan:hover {
+    background-color: rgb(235, 249, 255);
+}
+
+#updated-layanan:hover #icon-notif-updated {
+    color: rgb(92, 92, 255);
+}
+
+#hapus-layanan:hover {
+    background-color: rgb(254, 235, 235);
+}
+
+#hapus-layanan:hover #icon-notif-deleted {
+    color: red;
+}
+
+#tambah-layanan:hover {
+    background-color: rgb(235, 253, 235);
+}
+
+#tambah-layanan:hover #icon-notif-add {
+    color: green;
+}
+
+#notif-action {
+    transition: all 0.5s ease 0s;
+}
+
+#notif-action:hover {
+    background-color: #728ff7;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* select style */
+.form-group .o-select-style {
+    background: transparent;
+    border: none;
+    height: fit-content;
+    color: #728ff7;
+    cursor: pointer;
+}
+
+.transaksi-view {
+    transition: all 0.5s ease 0s;
+    background-color: green;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.transaksi-view:hover {
+    color: white;
+    background-color: rgb(0, 77, 0);
+}
+
+.pendapatan-info {
+    transition: all 0.5s ease 0s;
+    border: 1px solid transparent;
+}
