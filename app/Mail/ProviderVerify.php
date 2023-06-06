@@ -30,7 +30,7 @@ class ProviderVerify extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from : new Address('e41212120@student.polije.ac.id', 'Kaftapus - Fatkhur Rozak'),
+            from : new Address('carenmore.info@kaptenojak.my.id', 'Carenmore Information'),
             subject: 'Carenmore Provider Verify',
 
         );

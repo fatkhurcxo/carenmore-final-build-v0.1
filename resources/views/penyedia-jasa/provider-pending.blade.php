@@ -62,11 +62,12 @@
             <h6 class="card-subtitle mb-2 text-primary-muted"></h6>
             <div class="row row-cols-2">
                 <div class="col text-center">
-                    <img class="" src="{{ url('ktp/' . $ktp->fileNameKTP) }}" alt=""
+                    <img class="" src="">
+                    <img class="" src="{{ url('storage/' . $ktp->fileNameKTP) }}" alt=""
                         style="object-fit: contain;" height="150">
                 </div>
                 <div class="col text-center">
-                    <img class="" src="{{ url('ktp/' . $ktp->fileNameSelfie) }}" alt=""
+                    <img class="" src="{{ url('storage/' . $ktp->fileNameSelfie) }}" alt=""
                         style="object-fit: contain;" height="150">
                 </div>
             </div>

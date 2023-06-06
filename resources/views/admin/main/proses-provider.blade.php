@@ -105,7 +105,7 @@
                                             class="text-danger">*</span></label>
                                     <div class="col-sm-9 border d-flex justify-content-center">
                                         <img class="img-fluid" style="object-fit: contain;"
-                                            src="{{ url('ktp/' . $ktp->fileNameKTP) }}" alt="" height="250">
+                                            src="{{ url('storage/' . $ktp->fileNameKTP) }}" alt="" height="250">
                                     </div>
                                     <div class="col col-3">
 
@@ -120,7 +120,7 @@
                                             class="text-danger">*</span></label>
                                     <div class="col-sm-9 border d-flex justify-content-center">
                                         <img class="img-fluid" style="object-fit: contain;"
-                                            src="{{ url('ktp/' . $ktp->fileNameSelfie) }}" alt="" height="250">
+                                            src="{{ url('storage/' . $ktp->fileNameSelfie) }}" alt="" height="250">
                                     </div>
                                     <div class="col col-3">
 

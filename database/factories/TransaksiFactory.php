@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Layanan;
+use App\Models\Provider;
+use App\Models\Customer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +20,14 @@ class TransaksiFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'layanan_id' => Layanan::factory(),
+            'provider_id' => Provider::factory(),
+            'customer_id' => Customer::factory(),
+            'berlangganan' => 1,
+            'reference' => fake()->word() . mt_rand(10000, 99999),
+            'pembayaran' => 'paid',
+            'status' => 'proses',
+            'nominal' => mt_rand(15000, 100000)
         ];
     }
 }

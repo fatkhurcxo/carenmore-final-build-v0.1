@@ -29,8 +29,8 @@ use App\Http\Middleware\CleaningProvider\ProviderCheck;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('homepage.index');
+})->name('guest.home');
 
 /* Route for Guest */
 Route::name('guest.')->prefix('guest')->middleware('guest')->group(function (){
@@ -107,6 +107,9 @@ Route::name('provider.')->prefix('provider')->middleware(['auth', 'adminignore']
         Route::get('layanan/ubah/{update}', 'viewUbahLayanan')->name('view.update');
         Route::get('layanan/pengajuan', 'viewPengajuan')->name('view.pengajuan');
         Route::get('layanan/pengajuan/{pengajuan}', 'viewDirectPengajuan')->name('view.pengajuan.direct');
+        Route::get('/transaksi', 'viewTransaksi')->name('view.transaksi');
+        Route::get('/income', 'viewIncome')->name('view.income');
+        
     });
     /* POST PROVIDER */
     Route::controller(ProviderInputController::class)->group(function () {
@@ -124,12 +127,7 @@ Route::name('provider.')->prefix('provider')->middleware(['auth', 'adminignore']
         $provider = Provider::firstWhere('user_id', Auth::id());
         return view('penyedia-jasa.layanan-aktif', compact('layanan', 'provider'));
     })->name('layanan');
-    Route::get('/income', function (){
-        return view('penyedia-jasa.income');
-    });
-    Route::get('/transaksi', function () {
-        return view('penyedia-jasa.transaksi');
-    });
+    
     Route::get('/feedback', function () {
         return view('penyedia-jasa.feedback');
     });

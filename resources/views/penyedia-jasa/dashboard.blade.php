@@ -68,7 +68,7 @@
                     Daftar seluruh transaksi yang terjadi hari ini.
                 </p>
                 <div class="table-responsive pt-3">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered mb-3">
                         <thead>
                             <tr>
                                 <th>
@@ -98,29 +98,70 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($newTransactions as $n => $data)
                             <tr>
                                 <td>
-                                    7
+                                    {{ $n += 1 }}
                                 </td>
                                 <td>
-                                    Zenaida Frank
+                                    {{ $data->reference }}
                                 </td>
                                 <td>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                                            role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
+                                    {{ $data->customer->nama }}
                                 </td>
                                 <td>
-                                    $313,500
+                                    {{ $data->layanan->nama }}
+                                </td>
+                                <!--<td>-->
+                                <!--    <div class="progress">-->
+                                <!--        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"-->
+                                <!--            role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"-->
+                                <!--            aria-valuemax="100"></div>-->
+                                <!--    </div>-->
+                                <!--</td>-->
+                                <td>
+                                    @if($data->pembayaran == 'paid')
+                                    <span class="badge badge-success">
+                                        {{ $data->pembayaran }}
+                                    </span>
+                                    @elseif($data->pembayaran == 'unpaid')
+                                    <span class="badge badge-warning">
+                                        {{ $data->pembayaran }}
+                                    </span>
+                                    @elseif($data->pembayaran == 'expired')
+                                    <span class="badge badge-danger">
+                                        {{ $data->pembayaran }}
+                                    </span>
+                                    @endif
                                 </td>
                                 <td>
-                                    March 22, 2013
+                                    @if($data->status == 'selesai')
+                                    <span class="badge badge-success">
+                                        {{ $data->status }}
+                                    </span>
+                                    @elseif($data->status == 'proses')
+                                    <span class="badge badge-warning">
+                                        {{ $data->status }}
+                                    </span>
+                                    @elseif($data->status == 'dibatalkan')
+                                    <span class="badge badge-danger">
+                                        {{ $data->status }}
+                                    </span>
+                                    @endif
+                                </td>
+                                <td>
+                                    Rp{{ number_format($data->nominal) }}
+                                </td>
+                                <td>
+                                    <button  class="btn btn-primary btn-sm">
+                                        Detail
+                                    </button>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
+                    {{ $newTransactions->links('vendor.pagination.bootstrap-5') }}
                 </div>
             </div>
         </div>

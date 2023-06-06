@@ -10,7 +10,7 @@
     <title>Carenmore</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="{{ asset('favicon_hmpg.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}">
 
     <!-- CSS Files -->
     <!--==== Google Fonts ====-->

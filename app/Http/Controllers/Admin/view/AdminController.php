@@ -133,6 +133,6 @@ class AdminController extends Controller
 
     public function download($img)
     {
-        return Storage::download('ktp/' . $img);
+        return Storage::download('public/' . $img);
     }
 }

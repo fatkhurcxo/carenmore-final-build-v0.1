@@ -15,9 +15,7 @@
             <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h6 class="card-title">Data Table</h6>
-                        <p class="card-description">Read the <a href="https://datatables.net/" target="_blank"> Official
-                                DataTables Documentation </a>for a full list of instructions and other options.</p>
+                        <h6 class="card-title">Data Transaksi</h6>
                         <div class="table-responsive">
                             <table id="dataTableExample" class="table">
                                 <thead>
@@ -33,25 +31,50 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($transactions as $n => $data)
                                     <tr>
-                                        <td>1</td>
-                                        <td>CM678890</td>
-                                        <td>Diana Del Viero</td>
-                                        <td>Cuci Motor Deepclean</td>
-                                        <td>Rp25.000</td>
                                         <td>
+                                            {{ $n += 1 }}
+                                        </td>
+                                        <td>
+                                            {{ $data->reference }}
+                                        </td>
+                                        <td>
+                                            {{ $data->customer->nama }}
+                                        </td>
+                                        <td>
+                                            {{ $data->layanan->nama }}
+                                        </td>
+                                        <td>
+                                            {{ $data->nominal }}
+                                        </td>
+                                        <td>
+                                            @if($data->berlangganan == 1)
                                             <span class="badge badge-danger">
                                                 tidak
                                             </span>
+                                            @elseif($data->berlangganan !== 1)
+                                            <span class="badge badge-success">
+                                                ya
+                                            </span>
+                                            @endif
                                         </td>
-                                        <td>2011/04/25</td>
-                                        <td class="text-center">
-                                            <button class="btn btn-sm btn-outline-info">Detail</button>
-                                            <button class="btn btn-sm btn-outline-danger"><i data-feather="printer"
-                                                    style="width: 13px; height: 13px;"></i>
-                                                Cetak</button>
+                                        <td>
+                                            {{ $data->created_at }}
+                                        </td>
+                                        <!--<td class="text-center">-->
+                                        <!--    <button class="btn btn-sm btn-outline-info">Detail</button>-->
+                                        <!--    <button class="btn btn-sm btn-outline-danger"><i data-feather="printer"-->
+                                        <!--            style="width: 13px; height: 13px;"></i>-->
+                                        <!--        Cetak</button>-->
+                                        <!--</td>-->
+                                        <td>
+                                            <button class="btn btn-primary btn-sm">
+                                                Detail
+                                            </button>
                                         </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
