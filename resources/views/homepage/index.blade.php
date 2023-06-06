@@ -118,40 +118,48 @@
     </section><!-- End of feature area -->
 
     <!-- Counter up area -->
-    <section class="border-top pt-120 pb-80">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
+    <!--<section class="border-top pt-120 pb-80">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-md-3 col-sm-6">-->
+    <!--                 single counetr -->
+    <!--                <div class="single-counter text-center">-->
+    <!--                    <span class="counter">4789</span>-->
+    <!--                    <p>Downloads</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-3 col-sm-6">-->
+    <!--                 single counetr -->
+    <!--                <div class="single-counter text-center">-->
+    <!--                    <span class="counter">6389</span>-->
+    <!--                    <p>Liks</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-3 col-sm-6">-->
+    <!--                 single counetr -->
+    <!--                <div class="single-counter text-center">-->
+    <!--                    <span class="counter">900</span>-->
+    <!--                    <p>5 Star Reating</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-3 col-sm-6">-->
+    <!--                 single counetr -->
+    <!--                <div class="single-counter text-center">-->
+    <!--                    <span class="counter">489</span>-->
+    <!--                    <p>Cleaning Service Provider</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
                     <!-- single counetr -->
-                    <div class="single-counter text-center">
-                        <span class="counter">4789</span>
-                        <p>Downloads</p>
-                    </div><!-- single counetr -->
-                </div>
-                <div class="col-md-3 col-sm-6">
                     <!-- single counetr -->
-                    <div class="single-counter text-center">
-                        <span class="counter">6389</span>
-                        <p>Liks</p>
-                    </div><!-- single counetr -->
-                </div>
-                <div class="col-md-3 col-sm-6">
                     <!-- single counetr -->
-                    <div class="single-counter text-center">
-                        <span class="counter">900</span>
-                        <p>5 Star Reating</p>
-                    </div><!-- single counetr -->
-                </div>
-                <div class="col-md-3 col-sm-6">
                     <!-- single counetr -->
-                    <div class="single-counter text-center">
-                        <span class="counter">489</span>
-                        <p>Cleaning Service Provider</p>
-                    </div><!-- single counetr -->
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.End of Counter up area -->
+                <!-- /.col -->
+            <!-- /.row -->
+        <!-- /.container -->
+    <!-- /.End of Counter up area -->
 
     <!-- interact user -->
     <section class="bg-2 pt-120 pb-120">
@@ -219,20 +227,20 @@
     <!-- interact user -->
 
     <!-- app video -->
-    <section class="app-video">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- why bottle video -->
-                    <div class="theme-video-wrap">
-                        <a href="https://www.youtube.com/watch?v=SZEflIVnhH8" class="video-btn" data-popup="video"><i
-                                class="fa fa-play"></i></a>
-                    </div>
+    <!--<section class="app-video">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-12">-->
+    <!--                <div class="theme-video-wrap">-->
+    <!--                    <a href="https://www.youtube.com/watch?v=SZEflIVnhH8" class="video-btn" data-popup="video"><i-->
+    <!--                            class="fa fa-play"></i></a>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
                     <!-- end of why bottle video -->
-                </div>
-            </div>
-        </div>
-    </section>
+                    <!-- why bottle video -->
     <!-- End of why bottol water -->
 
     <!-- app screen -->
