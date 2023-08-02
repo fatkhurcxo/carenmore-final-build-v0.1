@@ -34,7 +34,7 @@ return [
     'google' => [
         'client_id' => '658788002753-kqa0l0m55ql9jmjdfcsibc6n3pddtqdu.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'https://kaptenojak.my.id/authg/callback'
+        'redirect' => 'http://127.0.0.1:8000/authg/callback'
     ]
 
 ];

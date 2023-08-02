@@ -50,12 +50,12 @@
                     <span class="link-title">Transaksi</span>
                 </a>
             </li>
-            <li class="nav-item {{ active_class(['provider/feedback']) }}">
+            {{-- <li class="nav-item {{ active_class(['provider/feedback']) }}">
                 <a href="{{ url('provider/feedback') }}" class="nav-link">
                     <i class="link-icon" data-feather="alert-octagon"></i>
                     <span class="link-title">Feedback</span>
                 </a>
-            </li>
+            </li> --}}
             {{-- END CUSTOMER --}}
             {{-- TAGIHAN --}}
             <!--<li class="nav-item nav-category">Tagihan Aplikasi</li>-->

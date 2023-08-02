@@ -43,7 +43,7 @@
                             <label class="tx-11 font-weight-bold mb-0 text-uppercase">Diajukan pada</label>
                             <p class="text-muted"> {{ $detail->updated_at }} </p>
                         </div>
-                        <div class="mt-3 d-flex social-links">
+                        {{-- <div class="mt-3 d-flex social-links">
                             <a href="javascript:;"
                                 class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon github">
                                 <i data-feather="github" data-toggle="tooltip" title="github.com/nobleui"></i>
@@ -56,7 +56,7 @@
                                 class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon instagram">
                                 <i data-feather="instagram" data-toggle="tooltip" title="instagram.com/nobleui"></i>
                             </a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -120,7 +120,8 @@
                                             class="text-danger">*</span></label>
                                     <div class="col-sm-9 border d-flex justify-content-center">
                                         <img class="img-fluid" style="object-fit: contain;"
-                                            src="{{ url('storage/' . $ktp->fileNameSelfie) }}" alt="" height="250">
+                                            src="{{ url('storage/' . $ktp->fileNameSelfie) }}" alt=""
+                                            height="250">
                                     </div>
                                     <div class="col col-3">
 
@@ -143,8 +144,7 @@
                         <div class="card rounded">
                             <div class="card-body">
                                 <h6 class="card-title">Proses Pengajuan</h6>
-                                <form action="{{ route('admin.post.verifiy', ['detail' => $detail->id]) }}"
-                                    method="POST">
+                                <form action="{{ route('admin.post.verifiy', ['detail' => $detail->id]) }}" method="POST">
                                     @csrf
                                     <fieldset>
                                         <div class="form-group">

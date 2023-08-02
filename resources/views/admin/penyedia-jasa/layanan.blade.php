@@ -21,10 +21,10 @@
                     <a class="nav-link" id="profile-line-tab" data-toggle="tab" href="#berlangganan" role="tab"
                         aria-controls="profile" aria-selected="false">Berlangganan</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" id="contact-line-tab" data-toggle="tab" href="#contact" role="tab"
                         aria-controls="contact" aria-selected="false">Updated <span class="badge badge-primary">6</span></a>
-                </li>
+                </li> --}}
             </ul>
             <div class="tab-content mt-3" id="lineTabContent">
                 <div class="tab-pane fade show active" id="layanan" role="tabpanel" aria-labelledby="home-line-tab">
@@ -168,8 +168,7 @@
                                                         id="layanan_opsi"><i data-feather="more-vertical"
                                                             style="color: #728ff7;"></i></a>
                                                     <div class="dropdown-menu o-drop-menu"
-                                                        style="text-transform: capitalize;"
-                                                        aria-labelledby="layanan_opsi">
+                                                        style="text-transform: capitalize;" aria-labelledby="layanan_opsi">
                                                         <a class="dropdown-item"
                                                             href={{ route('admin.view.update.berlangganan', ['detail' => $data->id]) }}>Ubah</a>
                                                         <a class="dropdown-item"

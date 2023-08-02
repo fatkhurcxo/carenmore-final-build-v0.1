@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-5 d-md-block d-none">
                         <div class="urgent-call text-right">
-                            <a href="#" class="btn">Get Carenmore</a>
+                            <a href="{{ route('download.apk') }}" class="btn">Get Carenmore</a>
                         </div>
                     </div>
                 </div>

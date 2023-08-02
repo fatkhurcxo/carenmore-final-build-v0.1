@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\post\AdminSendController;
 use App\Http\Controllers\Admin\view\AdminController;
+use App\Http\Controllers\downloadApk\ApkController;
 use App\Models\KTP;
 use App\Models\Layanan;
 use App\Models\Provider;
@@ -50,6 +51,9 @@ Route::name('guest.')->prefix('guest')->middleware('guest')->group(function (){
         Route::get('/reg/oauth','regWithGoogle')->name('regWithGoogle');
     });
 });
+
+/* apk download */
+Route::get('/downloadapk', [ApkController::class, 'downloadApk'])->name('download.apk');
 
 /* Logout */
 Route::get('/logout', [OtentikasiController::class, 'logout'])->name('logout');
@@ -109,7 +113,7 @@ Route::name('provider.')->prefix('provider')->middleware(['auth', 'adminignore']
         Route::get('layanan/pengajuan/{pengajuan}', 'viewDirectPengajuan')->name('view.pengajuan.direct');
         Route::get('/transaksi', 'viewTransaksi')->name('view.transaksi');
         Route::get('/income', 'viewIncome')->name('view.income');
-        
+
     });
     /* POST PROVIDER */
     Route::controller(ProviderInputController::class)->group(function () {
@@ -127,7 +131,7 @@ Route::name('provider.')->prefix('provider')->middleware(['auth', 'adminignore']
         $provider = Provider::firstWhere('user_id', Auth::id());
         return view('penyedia-jasa.layanan-aktif', compact('layanan', 'provider'));
     })->name('layanan');
-    
+
     Route::get('/feedback', function () {
         return view('penyedia-jasa.feedback');
     });

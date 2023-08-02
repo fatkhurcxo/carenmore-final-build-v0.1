@@ -40,12 +40,12 @@
                     <span class="link-title">Layanan</span>
                 </a>
             </li>
-            <li class="nav-item {{ active_class(['admin/income']) }} ">
+            {{-- <li class="nav-item {{ active_class(['admin/income']) }} ">
                 <a href="{{ url('admin/income') }}" class="nav-link">
                     <i class="link-icon" data-feather="dollar-sign"></i>
                     <span class="link-title">Income</span>
                 </a>
-            </li>
+            </li> --}}
             {{-- END PENYEDIA JASA --}}
             {{-- CUSTOMER --}}
             <li class="nav-item nav-category">customers</li>
@@ -61,12 +61,12 @@
                     <span class="link-title">Transaksi</span>
                 </a>
             </li>
-            <li class="nav-item {{ active_class(['admin/feedback']) }}">
+            {{-- <li class="nav-item {{ active_class(['admin/feedback']) }}">
                 <a href="{{ url('admin/feedback') }}" class="nav-link">
                     <i class="link-icon" data-feather="alert-octagon"></i>
                     <span class="link-title">Feedback</span>
                 </a>
-            </li>
+            </li> --}}
             {{-- END CUSTOMER --}}
             {{-- PROMO --}}
             {{-- <li class="nav-item nav-category">Promotion</li>
@@ -117,7 +117,7 @@
             </li> --}}
             {{-- END EMAIL --}}
             {{-- WEB APPS --}}
-            <li class="nav-item nav-category">web apps</li>
+            {{-- <li class="nav-item nav-category">web apps</li>
             <li class="nav-item {{ active_class(['email/*']) }}">
                 <a class="nav-link" data-toggle="collapse" href="#email" role="button"
                     aria-expanded="{{ is_active_route(['email/*']) }}" aria-controls="email">
@@ -153,9 +153,9 @@
                     <i class="link-icon" data-feather="calendar"></i>
                     <span class="link-title">Calendar</span>
                 </a>
-            </li>
+            </li> --}}
             {{-- END WEB APPS --}}
-            <li class="nav-item nav-category">Components</li>
+            {{-- <li class="nav-item nav-category">Components</li>
             <li class="nav-item {{ active_class(['ui-components/*']) }}">
                 <a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button"
                     aria-expanded="{{ is_active_route(['ui-components/*']) }}" aria-controls="uiComponents">
@@ -472,7 +472,7 @@
                     <i class="link-icon" data-feather="hash"></i>
                     <span class="link-title">Documentation</span>
                 </a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </nav>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\view;
 
 use App\Models\Customer;
 use App\Models\Provider;
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
 use App\Services\Admin\SendData;
 use App\Http\Controllers\Controller;
@@ -18,13 +19,15 @@ class AdminController extends Controller
     {
         $pengajuan = $get->dataPengajuan();
         $berlangganan = $get->dataPengajuanBerlangganan();
+        $transactions = Transaksi::latest()->paginate(5);
 
-        return view('admin.dashboard', ['pengajuan' => $pengajuan, 'berlangganan' => $berlangganan]);
+        return view('admin.dashboard', ['pengajuan' => $pengajuan, 'berlangganan' => $berlangganan, 'transactions' => $transactions]);
     }
 
     public function viewTagihan()
     {
-        return view('admin.main.tagihan');
+        $providers = Provider::latest()->paginate(10);
+        return view('admin.main.tagihan', ['providers' => $providers]);
     }
 
     public function viewProvider(SendData $get)
@@ -109,7 +112,8 @@ class AdminController extends Controller
 
     public function viewTransaksi()
     {
-        return view('admin.customers.transaksi');
+        $transactions = Transaksi::latest()->get();
+        return view('admin.customers.transaksi', ['transactions' => $transactions]);
     }
 
     public function viewFeedback()
@@ -135,4 +139,6 @@ class AdminController extends Controller
     {
         return Storage::download('public/' . $img);
     }
+
+
 }

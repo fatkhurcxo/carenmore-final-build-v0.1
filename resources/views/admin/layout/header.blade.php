@@ -221,19 +221,19 @@
                                 alt="">
                         </div>
                         <div class="info text-center">
-                            <p class="name font-weight-bold mb-0"> </p>
+                            <p class="name font-weight-bold mb-0">Hello Expo 2023</p>
                             <p class="email text-muted mb-3"> </p>
                         </div>
                     </div>
                     <div class="dropdown-body">
                         <ul class="profile-nav p-0 pt-3">
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="@if (request()->is('provider/*')) {{ route('provider.view.profile') }} @endif"
                                     class="nav-link">
                                     <i data-feather="user"></i>
                                     <span>Profile</span>
                                 </a>
-                            </li>
+                            </li> --}}
                             {{-- <li class="nav-item">
                                 <a href="javascript:;" class="nav-link">
                                     <i data-feather="edit"></i>
