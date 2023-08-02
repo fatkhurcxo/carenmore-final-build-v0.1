@@ -65,7 +65,7 @@ class LwInputDataProvider extends Component
         /* Source Alamat Data */
         $alamat = [
             'jalan' => $this->data['alamat_jalan'],
-            'rt/rw' => $this->data['alamat_rtrw'],
+            'rtrw' => $this->data['alamat_rtrw'],
             'desa' => $this->data['alamat_desa'],
             'kecamatan' => $this->data['alamat_kecamatan'],
             'kabupaten' => $this->data['alamat_kabupaten'],
@@ -120,10 +120,10 @@ class LwInputDataProvider extends Component
             $fixname = $imgname . $filename . '.' . $ktpfile[$n]->getClientOriginalExtension();
 
             /* Store file */
-            Storage::putFileAs('ktp', $ktpfile[$n], $fixname);
+            Storage::putFileAs('public/', $ktpfile[$n], $fixname);
             /* Generate path */
             # To show image from Storage link ('ktp) => storage/app/ktp
-            $path = Storage::url('ktp/' . $fixname);
+            $path = Storage::url('app/public/' . $fixname);
 
             # Collect ktp path
             $paths[] = $path;

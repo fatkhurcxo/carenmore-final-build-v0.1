@@ -52,7 +52,7 @@
                     </div>
                     <div class="col text-right">
                         <div class="dropdown">
-                            <button class="btn btn-outline-primary btn-icon" type="button" id="dropdownMenuButton"
+                            {{-- <button class="btn btn-outline-primary btn-icon" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i data-feather="more-horizontal"></i>
                             </button>
@@ -60,7 +60,7 @@
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                     Daftar seluruh transaksi yang terjadi hari ini.
                 </p>
                 <div class="table-responsive pt-3">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered mb-3">
                         <thead>
                             <tr>
                                 <th>
@@ -92,35 +92,76 @@
                                 <th>
                                     Nominal
                                 </th>
-                                <th>
+                                {{-- <th>
                                     Opsi
-                                </th>
+                                </th> --}}
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    7
-                                </td>
-                                <td>
-                                    Zenaida Frank
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                                            role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $313,500
-                                </td>
-                                <td>
-                                    March 22, 2013
-                                </td>
-                            </tr>
+                            @foreach ($newTransactions as $n => $data)
+                                <tr>
+                                    <td>
+                                        {{ $n += 1 }}
+                                    </td>
+                                    <td>
+                                        {{ $data->reference }}
+                                    </td>
+                                    <td>
+                                        {{ $data->customer->nama }}
+                                    </td>
+                                    <td>
+                                        {{ $data->layanan->nama }}
+                                    </td>
+                                    <!--<td>-->
+                                    <!--    <div class="progress">-->
+                                    <!--        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"-->
+                                    <!--            role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"-->
+                                    <!--            aria-valuemax="100"></div>-->
+                                    <!--    </div>-->
+                                    <!--</td>-->
+                                    <td>
+                                        @if ($data->pembayaran == 'paid')
+                                            <span class="badge badge-success">
+                                                {{ $data->pembayaran }}
+                                            </span>
+                                        @elseif($data->pembayaran == 'unpaid')
+                                            <span class="badge badge-warning">
+                                                {{ $data->pembayaran }}
+                                            </span>
+                                        @elseif($data->pembayaran == 'expired')
+                                            <span class="badge badge-danger">
+                                                {{ $data->pembayaran }}
+                                            </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if ($data->status == 'selesai')
+                                            <span class="badge badge-success">
+                                                {{ $data->status }}
+                                            </span>
+                                        @elseif($data->status == 'proses')
+                                            <span class="badge badge-warning">
+                                                {{ $data->status }}
+                                            </span>
+                                        @elseif($data->status == 'dibatalkan')
+                                            <span class="badge badge-danger">
+                                                {{ $data->status }}
+                                            </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        Rp{{ number_format($data->nominal) }}
+                                    </td>
+                                    {{-- <td>
+                                    <button  class="btn btn-primary btn-sm">
+                                        Detail
+                                    </button>
+                                </td> --}}
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
+                    {{ $newTransactions->links('vendor.pagination.bootstrap-5') }}
                 </div>
             </div>
         </div>
@@ -132,7 +173,7 @@
                         <div class="d-flex justify-content-between align-items-baseline mb-2">
                             <h6 class="card-title mb-0">Layanan aktif</h6>
                             <div class="dropdown mb-2">
-                                <button class="btn p-0" type="button" id="dropdownMenuButton6" data-toggle="dropdown"
+                                {{-- <button class="btn p-0" type="button" id="dropdownMenuButton6" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                 </button>
@@ -147,7 +188,7 @@
                                             class="icon-sm mr-2"></i> <span class="">Print</span></a>
                                     <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="download"
                                             class="icon-sm mr-2"></i> <span class="">Download</span></a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="d-flex flex-column">
@@ -288,9 +329,9 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-baseline mb-2">
-                            <h6 class="card-title mb-0">Customer berlangganan</h6>
+                            <h6 class="card-title mb-0">Riwayat pengajuan berlangganan</h6>
                             <div class="dropdown mb-2">
-                                <button class="btn p-0" type="button" id="dropdownMenuButton7" data-toggle="dropdown"
+                                {{-- <button class="btn p-0" type="button" id="dropdownMenuButton7" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                 </button>
@@ -308,7 +349,7 @@
                                     <a class="dropdown-item d-flex align-items-center" href="#"><i
                                             data-feather="download" class="icon-sm mr-2"></i> <span
                                             class="">Download</span></a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="table-responsive">
@@ -316,22 +357,44 @@
                                 <thead>
                                     <tr>
                                         <th class="pt-0">No.</th>
-                                        <th class="pt-0">Nama Customer</th>
                                         <th class="pt-0">Nama Layanan</th>
+                                        <th class="pt-0">Jumlah Cuci</th>
+                                        <th class="pt-0">Customisasi</th>
+                                        <th class="pt-0">Harga</th>
                                         <th class="pt-0">Status</th>
-                                        <th class="pt-0">Berlaku</th>
-                                        <th class="pt-0">Opsi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>NobleUI jQuery</td>
-                                        <td>01/01/2021</td>
-                                        <td><span class="badge badge-danger">Released</span></td>
-                                        <td>Leonardo Payne</td>
-                                        <td><a href="" class="btn btn-primary">Tinjau</a></td>
-                                    </tr>
+                                    @foreach ($berlangganan as $index => $data)
+                                        <tr>
+                                            <td>
+                                                {{ $index += 1 }}
+                                            </td>
+                                            <td>
+                                                {{ $data->nama }}
+                                            </td>
+                                            <td>
+                                                <strong>{{ $data->jumlah }}X Cuci</strong>
+                                            </td>
+                                            <td>
+                                                @if ($data->auto == 1)
+                                                    <span class="badge badge-success">ya</span>
+                                                @elseif ($data->auto != 1)
+                                                    <span class="badge badge-warning">ya</span>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                Rp{{ number_format($data->harga) }}
+                                            </td>
+                                            <td>
+                                                @if ($data->status == 'aktif')
+                                                    <span class="badge badge-success">{{ $data->status }}</span>
+                                                @elseif ($data->status == 'nonaktif')
+                                                    <span class="badge badge-warning">{{ $data->status }}</span>
+                                                @endif
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

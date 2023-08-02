@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Provider\view;
 
+use App\Models\Transaksi;
 use App\Models\KTP;
 use App\Models\Layanan;
 use App\Models\Provider;
@@ -64,9 +65,14 @@ class ProviderController extends Controller
         $provider = Provider::firstWhere('user_id', Auth::user()->id);
         if($provider)
         {
+            $berlangganan = Berlangganan::where([
+                'provider_id' => $provider->id,
+                'status' => 'nonaktif'
+            ])->latest()->paginate(5);
+            $newTransactions = Transaksi::latest()->paginate(5);
             $ktp = KTP::firstWhere('provider_id', $provider->id);
             $layanan = Layanan::where('provider_id', $this->getProviderID())->latest()->paginate(3);
-            return view('penyedia-jasa.dashboard', compact(['provider', 'ktp', 'layanan']));
+            return view('penyedia-jasa.dashboard', compact(['provider', 'ktp', 'layanan', 'newTransactions', 'berlangganan']));
         }
 
         return view('penyedia-jasa.dashboard');
@@ -138,5 +144,19 @@ class ProviderController extends Controller
     {
         $provider = $this->getProviderID('full');
         return view('penyedia-jasa.profile', ['provider' => $provider]);
+    }
+
+    public function viewTransaksi()
+    {
+        $transactions = Transaksi::latest()->get();
+
+        return view('penyedia-jasa.transaksi', ['transactions' => $transactions]);
+    }
+
+    public function viewIncome()
+    {
+        $id = $this->getProviderID();
+        $income = Transaksi::where('provider_id', $id)->sum('nominal');
+        return view('penyedia-jasa.income', ['income'  => $income]);
     }
 }

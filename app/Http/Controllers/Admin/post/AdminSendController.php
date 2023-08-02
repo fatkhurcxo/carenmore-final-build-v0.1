@@ -38,8 +38,8 @@ class AdminSendController extends Controller
         }
 
         Mail::to($providers->user->email)->send(new ProviderVerify($providers, $optionalMessage));
-
-        return redirect()->route('admin.view.base');
+        // dd($sendMail);
+        return redirect()->route('admin.view.base')->with('success', 'Berhasil melakukan verifikasi data dari '. $providers->provider);
 
     }
 

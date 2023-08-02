@@ -152,7 +152,7 @@
                 </div>
                 <div class="col text-right">
                     <div class="dropdown">
-                        <button class="btn btn-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        {{-- <button class="btn btn-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <i data-feather="more-horizontal"></i>
                         </button>
@@ -160,7 +160,7 @@
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
                             <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -192,33 +192,43 @@
                             <th>
                                 Nominal
                             </th>
-                            <th>
-                                Opsi
-                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                7
-                            </td>
-                            <td>
-                                Zenaida Frank
-                            </td>
-                            <td>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                                        role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </td>
-                            <td>
-                                $313,500
-                            </td>
-                            <td>
-                                March 22, 2013
-                            </td>
-                        </tr>
+                        @foreach ($transactions as $index => $data)
+                            <tr>
+                                <td>
+                                    {{ $index += 1 }}
+                                </td>
+                                <td>
+                                    {{ $data->reference }}
+                                </td>
+                                <td>
+                                    {{ $data->customer->nama }}
+                                </td>
+                                <td>
+                                    {{ $data->layanan->nama }}
+                                </td>
+                                <td class="text-center">
+                                    @if ($data->pembayaran == 'unpaid')
+                                        <span class="badge badge-warning">{{ $data->pembayaran }}</span>
+                                    @elseif ($data->pembayaran == 'paid')
+                                        <span class="badge badge-success">{{ $data->pembayaran }}</span>
+                                    @endif
+                                </td>
+                                <td class="text-center">
+                                    @if ($data->status == 'proses')
+                                        <span class="badge badge-warning">{{ $data->status }}</span>
+                                    @elseif ($data->status == 'selesai')
+                                        <span class="badge badge-success">{{ $data->status }}</span>
+                                    @endif
+
+                                </td>
+                                <td>
+                                    Rp{{ number_format($data->nominal) }}
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

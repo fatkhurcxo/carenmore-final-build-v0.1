@@ -32,15 +32,16 @@
                             <p>Carenmore merupakan aplikasi mobile yang dibangun untuk memberikan kemudahan penyaluran
                                 jasa bagi para
                                 pemilik usaha layanan kebersihan kendaraan kepada client.</p>
-                            <a href="#" class="btn">Download Sekarang</a>
-                            <a href="#" class="btn">Selengkapnya</a>
+                            <a href="{{ route('download.apk') }}" class="btn">Download Sekarang</a>
+                            <a href="#more" class="btn">Selengkapnya</a>
                         </div>
                         <!-- banner text -->
                     </div>
                     <div class="col-lg-5 offset-lg-1 col-md-4 offse-xl-2">
                         <!-- banner image-->
                         <div class="banner-image">
-                            <img id="img-mock" src="{{ asset('assets_hmpg/img/banner/Rectangle (1).png') }} "
+                            {{-- use figma mockup --}}
+                            <img id="img-mock rounded" src="{{ asset('assets_hmpg/img/mockup/new-mockup.png') }} "
                                 alt="">
                         </div>
                         <!--End of banner image-->
@@ -118,43 +119,51 @@
     </section><!-- End of feature area -->
 
     <!-- Counter up area -->
-    <section class="border-top pt-120 pb-80">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <!-- single counetr -->
-                    <div class="single-counter text-center">
-                        <span class="counter">4789</span>
-                        <p>Downloads</p>
-                    </div><!-- single counetr -->
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <!-- single counetr -->
-                    <div class="single-counter text-center">
-                        <span class="counter">6389</span>
-                        <p>Liks</p>
-                    </div><!-- single counetr -->
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <!-- single counetr -->
-                    <div class="single-counter text-center">
-                        <span class="counter">900</span>
-                        <p>5 Star Reating</p>
-                    </div><!-- single counetr -->
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <!-- single counetr -->
-                    <div class="single-counter text-center">
-                        <span class="counter">489</span>
-                        <p>Cleaning Service Provider</p>
-                    </div><!-- single counetr -->
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.End of Counter up area -->
+    <!--<section class="border-top pt-120 pb-80">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-md-3 col-sm-6">-->
+    <!--                 single counetr -->
+    <!--                <div class="single-counter text-center">-->
+    <!--                    <span class="counter">4789</span>-->
+    <!--                    <p>Downloads</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-3 col-sm-6">-->
+    <!--                 single counetr -->
+    <!--                <div class="single-counter text-center">-->
+    <!--                    <span class="counter">6389</span>-->
+    <!--                    <p>Liks</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-3 col-sm-6">-->
+    <!--                 single counetr -->
+    <!--                <div class="single-counter text-center">-->
+    <!--                    <span class="counter">900</span>-->
+    <!--                    <p>5 Star Reating</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="col-md-3 col-sm-6">-->
+    <!--                 single counetr -->
+    <!--                <div class="single-counter text-center">-->
+    <!--                    <span class="counter">489</span>-->
+    <!--                    <p>Cleaning Service Provider</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
+    <!-- single counetr -->
+    <!-- single counetr -->
+    <!-- single counetr -->
+    <!-- single counetr -->
+    <!-- /.col -->
+    <!-- /.row -->
+    <!-- /.container -->
+    <!-- /.End of Counter up area -->
 
     <!-- interact user -->
-    <section class="bg-2 pt-120 pb-120">
+    <section class="bg-2 pt-120 pb-120" id="more">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-sm-7">
@@ -176,7 +185,7 @@
                             Bersihkan kendaraan bermotormu tanpa perlu ribet dan buang waktu. Carenmore ada untuk kalian
                             yang malas atau sibuk dengan kerjaan, tapi kendaraan harus terlihat bersih.
                         </p>
-                        <a href="#" class="btn">Get Started</a>
+                        <a href="{{ route('download.apk') }}" class="btn">Get Started</a>
                     </div>
                     <!--End of user ineract text -->
                 </div>
@@ -202,7 +211,7 @@
                             yang malas atau sibuk
                             dengan kerjaan, tapi kendaraan harus terlihat bersih.
                         </p>
-                        <a href="#" class="btn">Get Started</a>
+                        <a href="{{ route('download.apk') }}" class="btn">Get Started</a>
                     </div>
                     <!--End of user ineract text -->
                 </div>
@@ -219,20 +228,20 @@
     <!-- interact user -->
 
     <!-- app video -->
-    <section class="app-video">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- why bottle video -->
-                    <div class="theme-video-wrap">
-                        <a href="https://www.youtube.com/watch?v=SZEflIVnhH8" class="video-btn" data-popup="video"><i
-                                class="fa fa-play"></i></a>
-                    </div>
-                    <!-- end of why bottle video -->
-                </div>
-            </div>
-        </div>
-    </section>
+    <!--<section class="app-video">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-12">-->
+    <!--                <div class="theme-video-wrap">-->
+    <!--                    <a href="https://www.youtube.com/watch?v=SZEflIVnhH8" class="video-btn" data-popup="video"><i-->
+    <!--                            class="fa fa-play"></i></a>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
+    <!-- end of why bottle video -->
+    <!-- why bottle video -->
     <!-- End of why bottol water -->
 
     <!-- app screen -->
@@ -254,7 +263,7 @@
                 <div class="app-carousel owl-carousel">
                     <!-- slingle app image -->
                     <div class="single-app-image">
-                        <img class="img-screen" src="{{ asset('assets_hmpg/img/banner/iPhone 14 Pro Max - 4.png') }} "
+                        <img class="img-screen" src="{{ asset('assets_hmpg/img/mockup/home-mock.jpg') }} "
                             data-rjs="2" alt="">
                     </div>
                     <!-- slingle app image -->
@@ -268,24 +277,48 @@
 
                     <!-- slingle app image -->
                     <div class="single-app-image">
-                        <img class="img-screen" src="{{ asset('assets_hmpg/img/banner/iPhone 14 Pro Max - 5.png') }} "
+                        <img class="img-screen" src="{{ asset('assets_hmpg/img/mockup/login-mock.jpg') }} "
                             data-rjs="2" alt="">
                     </div>
                     <!-- slingle app image -->
 
                     <!-- slingle app image -->
                     <div class="single-app-image">
-                        <img class="img-screen" src="{{ asset('assets_hmpg/img/banner/iPhone 14 Pro Max - 2.png') }} "
+                        <img class="img-screen" src="{{ asset('assets_hmpg/img/mockup/register-mock.jpg') }} "
                             data-rjs="2" alt="">
                     </div>
                     <!-- slingle app image -->
 
                     <!-- slingle app image -->
                     <div class="single-app-image">
-                        <img class="img-screen" src="{{ asset('assets_hmpg/img/banner/iPhone 14 Pro Max - 6.png') }} "
+                        <img class="img-screen" src="{{ asset('assets_hmpg/img/mockup/list-layanan-mock.jpg') }} "
                             data-rjs="2" alt="">
                     </div>
                     <!-- slingle app image -->
+                    <div class="single-app-image">
+                        <img class="img-screen" src="{{ asset('assets_hmpg/img/mockup/detail-and-channel.jpg') }} "
+                            data-rjs="2" alt="">
+                    </div>
+                    <!-- slingle app image -->
+                    <div class="single-app-image">
+                        <img class="img-screen" src="{{ asset('assets_hmpg/img/mockup/detail-pesanan.jpg') }} "
+                            data-rjs="2" alt="">
+                    </div>
+                    <!-- slingle app image -->
+                    <div class="single-app-image">
+                        <img class="img-screen" src="{{ asset('assets_hmpg/img/mockup/link-to-tripay.jpg') }} "
+                            data-rjs="2" alt="">
+                    </div>
+                    <!-- slingle app image -->
+                    <div class="single-app-image">
+                        <img class="img-screen" src="{{ asset('assets_hmpg/img/mockup/after-payment.jpg') }} "
+                            data-rjs="2" alt="">
+                    </div>
+                    <!-- slingle app image -->
+                    <div class="single-app-image">
+                        <img class="img-screen" src="{{ asset('assets_hmpg/img/mockup/end-mock.jpg') }} " data-rjs="2"
+                            alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -357,7 +390,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="#" class="btn">Get Started</a>
+                                            <a href="#{{ route('download.apk') }}" class="btn">Get Started</a>
                                         </div>
                                     </div>
                                     <!--end of Single price plan -->
@@ -431,7 +464,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="#" class="btn">Get Started</a>
+                                            <a href="{{ route('download.apk') }}" class="btn">Get Started</a>
                                         </div>
                                     </div>
                                     <!--end of Single price plan -->
@@ -444,35 +477,35 @@
                                     <!--Single price plan -->
                                     <div class="single-price-plan text-center">
                                         <div class="single-price-top">
-                                            <h4>Standard</h4>
-                                            <span>$200</span>
+                                            <h4>Cuci Motor Paket Standard</h4>
+                                            <span>Rp42.000</span>
                                         </div>
                                         <div class="single-price-body">
                                             <div class="price-list">
                                                 <ul>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        10 pages
+                                                        2 kali cuci /minggu
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        500 gb storage
+                                                        Dijadwalkan oleh Carenmore
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        10 sdd Database
+                                                        Free 1x Deepclean
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-times" aria-hidden="true"></i></span>
-                                                        Free coustom domain
+                                                        Free custom jadwal cuci
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-times" aria-hidden="true"></i></span>
-                                                        24/7 free support
+                                                        Voucher Carenmore 1x
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="#" class="btn">Get Started</a>
+                                            <a href="{{ route('download.apk') }}" class="btn">Get Started</a>
                                         </div>
                                     </div>
                                     <!--end of Single price plan -->
@@ -481,35 +514,35 @@
                                     <!--Single price plan -->
                                     <div class="single-price-plan active text-center">
                                         <div class="single-price-top">
-                                            <h4>Business</h4>
-                                            <span>$300</span>
+                                            <h4>Cuci Motor Paket Mid-Level</h4>
+                                            <span>Rp64.000</span>
                                         </div>
                                         <div class="single-price-body">
                                             <div class="price-list">
                                                 <ul>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        10 pages
+                                                        2x cuci /bulan
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        500 gb storage
+                                                        Dijadwalkan oleh Carenmore
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        10 sdd Database
+                                                        Full Deepclean
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        Free coustom domain
+                                                        Free custom jadwal cuci
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-times" aria-hidden="true"></i></span>
-                                                        24/7 free support
+                                                        Voucher Carenmore 1x
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="#" class="btn">Get Started</a>
+                                            <a href="{{ route('download.apk') }}" class="btn">Get Started</a>
                                         </div>
                                     </div>
                                     <!--end of Single price plan -->
@@ -518,35 +551,35 @@
                                     <!--Single price plan -->
                                     <div class="single-price-plan text-center">
                                         <div class="single-price-top">
-                                            <h4>Professional</h4>
-                                            <span>$400</span>
+                                            <h4>Cuci Motor Paket End-Level</h4>
+                                            <span>Rp78.000</span>
                                         </div>
                                         <div class="single-price-body">
                                             <div class="price-list">
                                                 <ul>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        10 pages
+                                                        3x cuci /bulan
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        500 gb storage
+                                                        Dijadwalkan oleh Carenmore
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        10 sdd Database
+                                                        Free 2x Deepclean
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        Free coustom domain
+                                                        Free custom jadwal cuci
                                                     </li>
                                                     <li>
                                                         <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                                        24/7 free support
+                                                        Voucher Carenmore 1x
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <a href="#" class="btn">Get Started</a>
+                                            <a href="{{ route('download.apk') }}" class="btn">Get Started</a>
                                         </div>
                                     </div>
                                     <!--end of Single price plan -->
@@ -563,218 +596,218 @@
 
     <!-- testimonial area -->
     <!-- <section class="pt-120 pb-110 bg-2">
-                                                                        <div class="container">
-                                                                            <div class="row justify-content-center">
-                                                                                <div class="col-md-8">
-                                                                                    <div class="testimonial-author-arousel text-center">
-                                                                                        <div class="testimonial-author-inner">
-                                                                                            <div class="author-carousel owl-carousel">
-                                                                                                <div class="single-author-imge">
-                                                                                                    <img src="assets/img/feature/author3.png" alt="">
-                                                                                                </div>
-                                                                                                <div class="single-author-imge">
-                                                                                                    <img src="assets/img/feature/author2.png" alt="">
-                                                                                                </div>
-                                                                                                <div class="single-author-imge">
-                                                                                                    <img src="assets/img/feature/author1.png" alt="">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
+                                                                                                                                                                <div class="container">
+                                                                                                                                                                    <div class="row justify-content-center">
+                                                                                                                                                                        <div class="col-md-8">
+                                                                                                                                                                            <div class="testimonial-author-arousel text-center">
+                                                                                                                                                                                <div class="testimonial-author-inner">
+                                                                                                                                                                                    <div class="author-carousel owl-carousel">
+                                                                                                                                                                                        <div class="single-author-imge">
+                                                                                                                                                                                            <img src="assets/img/feature/author3.png" alt="">
+                                                                                                                                                                                        </div>
+                                                                                                                                                                                        <div class="single-author-imge">
+                                                                                                                                                                                            <img src="assets/img/feature/author2.png" alt="">
+                                                                                                                                                                                        </div>
+                                                                                                                                                                                        <div class="single-author-imge">
+                                                                                                                                                                                            <img src="assets/img/feature/author1.png" alt="">
+                                                                                                                                                                                        </div>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>
+                                                                                                                                                                            </div>
 
-                                                                                    <div class="testimonial-author-comment text-center">
-                                                                                        <div class="author-comment-carousel owl-carousel">
-                                                                                            <div class="single-author-comment">
-                                                                                                <h4>This is due to their excellent service, competitive<br> pricing and customer
-                                                                                                    support. It’s throughly<br> refresing to get such
-                                                                                                    a personal touch.</h4>
-                                                                                                <p>Shirley Smith</p>
-                                                                                            </div>
+                                                                                                                                                                            <div class="testimonial-author-comment text-center">
+                                                                                                                                                                                <div class="author-comment-carousel owl-carousel">
+                                                                                                                                                                                    <div class="single-author-comment">
+                                                                                                                                                                                        <h4>This is due to their excellent service, competitive<br> pricing and customer
+                                                                                                                                                                                            support. It’s throughly<br> refresing to get such
+                                                                                                                                                                                            a personal touch.</h4>
+                                                                                                                                                                                        <p>Shirley Smith</p>
+                                                                                                                                                                                    </div>
 
-                                                                                            <div class="single-author-comment">
-                                                                                                <h4>This is due to their excellent service, competitive<br> pricing and customer
-                                                                                                    support. It’s throughly<br> refresing to get such
-                                                                                                    a personal touch.</h4>
-                                                                                                <p>Shirley Smith</p>
-                                                                                            </div>
-                                                                                            <div class="single-author-comment">
-                                                                                                <h4>This is due to their excellent service, competitive<br> pricing and customer
-                                                                                                    support. It’s throughly<br> refresing to get such
-                                                                                                    a personal touch.</h4>
-                                                                                                <p>Shirley Smith</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </section> -->
+                                                                                                                                                                                    <div class="single-author-comment">
+                                                                                                                                                                                        <h4>This is due to their excellent service, competitive<br> pricing and customer
+                                                                                                                                                                                            support. It’s throughly<br> refresing to get such
+                                                                                                                                                                                            a personal touch.</h4>
+                                                                                                                                                                                        <p>Shirley Smith</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <div class="single-author-comment">
+                                                                                                                                                                                        <h4>This is due to their excellent service, competitive<br> pricing and customer
+                                                                                                                                                                                            support. It’s throughly<br> refresing to get such
+                                                                                                                                                                                            a personal touch.</h4>
+                                                                                                                                                                                        <p>Shirley Smith</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>
+                                                                                                                                                                            </div>
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </div>
+                                                                                                                                                                </div>
+                                                                                                                                                            </section> -->
     <!--End of testimonial area -->
 
     <!-- our partner -->
     <!-- <section class="pt-120 pb-120">
-                                                                        <div class="container">
-                                                                            <div class="row">
-                                                                                <div class="col">
-                                                                                    partner carosel inner
-                                                                                    <div class="partner-carousel-wrap">
-                                                                                        <div class="partner-carousel owl-carousel">
-                                                                                            single partner
-                                                                                            <div class="single-partner">
-                                                                                                <img src="assets/img/partner2.png" alt="">
-                                                                                            </div>
-                                                                                            End of single partner
+                                                                                                                                                                <div class="container">
+                                                                                                                                                                    <div class="row">
+                                                                                                                                                                        <div class="col">
+                                                                                                                                                                            partner carosel inner
+                                                                                                                                                                            <div class="partner-carousel-wrap">
+                                                                                                                                                                                <div class="partner-carousel owl-carousel">
+                                                                                                                                                                                    single partner
+                                                                                                                                                                                    <div class="single-partner">
+                                                                                                                                                                                        <img src="assets/img/partner2.png" alt="">
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    End of single partner
 
-                                                                                            single partner
-                                                                                            <div class="single-partner">
-                                                                                                <img src="assets/img/partner2.png" alt="">
-                                                                                            </div>
-                                                                                            End of single partner
+                                                                                                                                                                                    single partner
+                                                                                                                                                                                    <div class="single-partner">
+                                                                                                                                                                                        <img src="assets/img/partner2.png" alt="">
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    End of single partner
 
-                                                                                            single partner
-                                                                                            <div class="single-partner">
-                                                                                                <img src="assets/img/partner2.png" alt="">
-                                                                                            </div>
-                                                                                            End of single partner
+                                                                                                                                                                                    single partner
+                                                                                                                                                                                    <div class="single-partner">
+                                                                                                                                                                                        <img src="assets/img/partner2.png" alt="">
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    End of single partner
 
-                                                                                            single partner
-                                                                                            <div class="single-partner">
-                                                                                                <img src="assets/img/partner2.png" alt="">
-                                                                                            </div>
-                                                                                            End of single partner
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    End of  partner carosel inner
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </section> -->
+                                                                                                                                                                                    single partner
+                                                                                                                                                                                    <div class="single-partner">
+                                                                                                                                                                                        <img src="assets/img/partner2.png" alt="">
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    End of single partner
+                                                                                                                                                                                </div>
+                                                                                                                                                                            </div>
+                                                                                                                                                                            End of  partner carosel inner
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </div>
+                                                                                                                                                                </div>
+                                                                                                                                                            </section> -->
     <!-- End of our partner -->
 
     <!-- start blog area -->
     <!-- <section class="border-top pt-115 pb-80" id='blog'>
-                                                                        <div class="container">
-                                                                            <div class="row justify-content-center">
-                                                                                <div class="col-lg-8 col-md-12">
-                                                                                    section title
-                                                                                    <div class="section-title text-center">
-                                                                                        <h2>Our News & Articles</h2>
-                                                                                        <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit
-                                                                                            lorem ipsum anim id est laborum perspiciatis unde.</p>
-                                                                                    </div>
-                                                                                    End of section title
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-lg-4 col-md-4">
-                                                                                    single blog inner
-                                                                                    <div class="single-blog-inner">
-                                                                                        blog image
-                                                                                        <div class="post-image">
-                                                                                            <a href="blog-details.html">
-                                                                                                <img src="assets/img/blog/blog1.png" alt="">
-                                                                                            </a>
-                                                                                            <div class="post-date">
-                                                                                                <p><span>30</span>Sep</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        /.End of  blog image
+                                                                                                                                                                <div class="container">
+                                                                                                                                                                    <div class="row justify-content-center">
+                                                                                                                                                                        <div class="col-lg-8 col-md-12">
+                                                                                                                                                                            section title
+                                                                                                                                                                            <div class="section-title text-center">
+                                                                                                                                                                                <h2>Our News & Articles</h2>
+                                                                                                                                                                                <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit
+                                                                                                                                                                                    lorem ipsum anim id est laborum perspiciatis unde.</p>
+                                                                                                                                                                            </div>
+                                                                                                                                                                            End of section title
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    <div class="row">
+                                                                                                                                                                        <div class="col-lg-4 col-md-4">
+                                                                                                                                                                            single blog inner
+                                                                                                                                                                            <div class="single-blog-inner">
+                                                                                                                                                                                blog image
+                                                                                                                                                                                <div class="post-image">
+                                                                                                                                                                                    <a href="blog-details.html">
+                                                                                                                                                                                        <img src="assets/img/blog/blog1.png" alt="">
+                                                                                                                                                                                    </a>
+                                                                                                                                                                                    <div class="post-date">
+                                                                                                                                                                                        <p><span>30</span>Sep</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>
+                                                                                                                                                                                /.End of  blog image
 
-                                                                                        post content
-                                                                                        <div class="post-content">
-                                                                                            <div class="post-details">
-                                                                                                <div class="post-info d-flex">
-                                                                                                    <a href="#"><span>By</span>Admin</a>
-                                                                                                    <a href="#"><span>1</span> Comment</a>
-                                                                                                </div>
+                                                                                                                                                                                post content
+                                                                                                                                                                                <div class="post-content">
+                                                                                                                                                                                    <div class="post-details">
+                                                                                                                                                                                        <div class="post-info d-flex">
+                                                                                                                                                                                            <a href="#"><span>By</span>Admin</a>
+                                                                                                                                                                                            <a href="#"><span>1</span> Comment</a>
+                                                                                                                                                                                        </div>
 
-                                                                                                <div class="post-title">
-                                                                                                    <h3><a href="blog-details.html">Pre and Post Launch Mobile App Marketing Pitfalls to
-                                                                                                            Avoid</a></h3>
-                                                                                                </div>
-                                                                                                <p>There are many variations of passages of available but majority have alteration in
-                                                                                                    some by inject humour or random
-                                                                                                    words.</p>
-                                                                                                <a class='blog-btn' href="blog-details.html">Read More</a>
-                                                                                            </div>
-                                                                                        </div>/.End of post content
-                                                                                    </div>/.End of single blog inner
-                                                                                </div>
+                                                                                                                                                                                        <div class="post-title">
+                                                                                                                                                                                            <h3><a href="blog-details.html">Pre and Post Launch Mobile App Marketing Pitfalls to
+                                                                                                                                                                                                    Avoid</a></h3>
+                                                                                                                                                                                        </div>
+                                                                                                                                                                                        <p>There are many variations of passages of available but majority have alteration in
+                                                                                                                                                                                            some by inject humour or random
+                                                                                                                                                                                            words.</p>
+                                                                                                                                                                                        <a class='blog-btn' href="blog-details.html">Read More</a>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>/.End of post content
+                                                                                                                                                                            </div>/.End of single blog inner
+                                                                                                                                                                        </div>
 
-                                                                                <div class="col-lg-4 col-md-4">
-                                                                                    single blog inner
-                                                                                    <div class="single-blog-inner">
-                                                                                        blog image
-                                                                                        <div class="post-image">
-                                                                                            <a href="blog-details.html">
-                                                                                                <img src="assets/img/blog/blog2.png" alt="">
-                                                                                            </a>
-                                                                                            <div class="post-date">
-                                                                                                <p><span>11</span>Sep</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        /.End of  blog image
+                                                                                                                                                                        <div class="col-lg-4 col-md-4">
+                                                                                                                                                                            single blog inner
+                                                                                                                                                                            <div class="single-blog-inner">
+                                                                                                                                                                                blog image
+                                                                                                                                                                                <div class="post-image">
+                                                                                                                                                                                    <a href="blog-details.html">
+                                                                                                                                                                                        <img src="assets/img/blog/blog2.png" alt="">
+                                                                                                                                                                                    </a>
+                                                                                                                                                                                    <div class="post-date">
+                                                                                                                                                                                        <p><span>11</span>Sep</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>
+                                                                                                                                                                                /.End of  blog image
 
-                                                                                        post content
-                                                                                        <div class="post-content">
-                                                                                            <div class="post-details">
-                                                                                                <div class="post-info d-flex">
-                                                                                                    <a href="#"><span>By</span>Admin</a>
-                                                                                                    <a href="#"><span>2</span> Comments</a>
-                                                                                                </div>
+                                                                                                                                                                                post content
+                                                                                                                                                                                <div class="post-content">
+                                                                                                                                                                                    <div class="post-details">
+                                                                                                                                                                                        <div class="post-info d-flex">
+                                                                                                                                                                                            <a href="#"><span>By</span>Admin</a>
+                                                                                                                                                                                            <a href="#"><span>2</span> Comments</a>
+                                                                                                                                                                                        </div>
 
-                                                                                                <div class="post-title">
-                                                                                                    <h3><a href="blog-details.html">Nascetur Etiam tempus sit amet vestibulum quis
-                                                                                                            variations.</a></h3>
-                                                                                                </div>
-                                                                                                <p>There are many variations of passages of available but majority have alteration in
-                                                                                                    some by inject
-                                                                                                    humour or random
-                                                                                                    words.</p>
-                                                                                                <a class='blog-btn' href="blog-details.html">Read More</a>
-                                                                                            </div>
-                                                                                        </div>/.End of post content
-                                                                                    </div>/.End of single blog inner
-                                                                                </div>
+                                                                                                                                                                                        <div class="post-title">
+                                                                                                                                                                                            <h3><a href="blog-details.html">Nascetur Etiam tempus sit amet vestibulum quis
+                                                                                                                                                                                                    variations.</a></h3>
+                                                                                                                                                                                        </div>
+                                                                                                                                                                                        <p>There are many variations of passages of available but majority have alteration in
+                                                                                                                                                                                            some by inject
+                                                                                                                                                                                            humour or random
+                                                                                                                                                                                            words.</p>
+                                                                                                                                                                                        <a class='blog-btn' href="blog-details.html">Read More</a>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>/.End of post content
+                                                                                                                                                                            </div>/.End of single blog inner
+                                                                                                                                                                        </div>
 
-                                                                                <div class="col-lg-4 col-md-4">
-                                                                                    single blog inner
-                                                                                    <div class="single-blog-inner">
-                                                                                        blog image
-                                                                                        <div class="post-image">
-                                                                                            <a href="blog-details.html">
-                                                                                                <img src="assets/img/blog/blog3.png" alt="">
-                                                                                            </a>
-                                                                                            <div class="post-date">
-                                                                                                <p><span>20</span>Nov</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        /.End of  blog image
+                                                                                                                                                                        <div class="col-lg-4 col-md-4">
+                                                                                                                                                                            single blog inner
+                                                                                                                                                                            <div class="single-blog-inner">
+                                                                                                                                                                                blog image
+                                                                                                                                                                                <div class="post-image">
+                                                                                                                                                                                    <a href="blog-details.html">
+                                                                                                                                                                                        <img src="assets/img/blog/blog3.png" alt="">
+                                                                                                                                                                                    </a>
+                                                                                                                                                                                    <div class="post-date">
+                                                                                                                                                                                        <p><span>20</span>Nov</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>
+                                                                                                                                                                                /.End of  blog image
 
-                                                                                        post content
-                                                                                        <div class="post-content">
-                                                                                            <div class="post-details">
-                                                                                                <div class="post-info d-flex">
-                                                                                                    <a href="#"><span>By</span>Admin</a>
-                                                                                                    <a href="#"><span>5</span> Comments</a>
-                                                                                                </div>
+                                                                                                                                                                                post content
+                                                                                                                                                                                <div class="post-content">
+                                                                                                                                                                                    <div class="post-details">
+                                                                                                                                                                                        <div class="post-info d-flex">
+                                                                                                                                                                                            <a href="#"><span>By</span>Admin</a>
+                                                                                                                                                                                            <a href="#"><span>5</span> Comments</a>
+                                                                                                                                                                                        </div>
 
-                                                                                                <div class="post-title">
-                                                                                                    <h3><a href="blog-details.html">It is a long established fact that and reader will
-                                                                                                            be distracted.</a></h3>
-                                                                                                </div>
-                                                                                                <p>There are many variations of passages of available but majority have alteration in
-                                                                                                    some by inject
-                                                                                                    humour or random
-                                                                                                    words.</p>
-                                                                                                <a class='blog-btn' href="blog-details.html">Read More</a>
-                                                                                            </div>
-                                                                                        </div>/.End of post content
-                                                                                    </div>/.End of single blog inner
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </section> -->
+                                                                                                                                                                                        <div class="post-title">
+                                                                                                                                                                                            <h3><a href="blog-details.html">It is a long established fact that and reader will
+                                                                                                                                                                                                    be distracted.</a></h3>
+                                                                                                                                                                                        </div>
+                                                                                                                                                                                        <p>There are many variations of passages of available but majority have alteration in
+                                                                                                                                                                                            some by inject
+                                                                                                                                                                                            humour or random
+                                                                                                                                                                                            words.</p>
+                                                                                                                                                                                        <a class='blog-btn' href="blog-details.html">Read More</a>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>/.End of post content
+                                                                                                                                                                            </div>/.End of single blog inner
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </div>
+                                                                                                                                                                </div>
+                                                                                                                                                            </section> -->
     <!-- end of blog artea -->
 
     <!-- download app -->
@@ -788,7 +821,7 @@
                             Clean Movement Enjoy Faster.
                         </h2>
                         <h3></h3>
-                        <a href="#" class="btn">Download App</a>
+                        <a href="{{ route('download.apk') }}" class="btn">Download App</a>
                     </div>
                 </div>
             </div>

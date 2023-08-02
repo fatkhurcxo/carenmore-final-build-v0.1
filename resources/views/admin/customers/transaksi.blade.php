@@ -14,16 +14,38 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Layanan</th>
-                            <th>Pemilik Layanan</th>
-                            <th>Wilayah</th>
-                            <th>Kontak</th>
+                            <th>Reference</th>
+                            <th>Nominal</th>
+                            <th>Layanan</th>
                             <th>Status</th>
-                            <th>Opsi</th>
+                            <th>Dibuat</th>
                         </tr>
                     </thead>
                     <tbody>
-
+                        @foreach ($transactions as $index => $data)
+                            <tr>
+                                <td>{{ $index += 1 }}</td>
+                                <td>
+                                    {{ $data->reference }}
+                                </td>
+                                <td>
+                                    {{ 'Rp' . number_format($data->nominal) }}
+                                </td>
+                                <td>
+                                    {{ $data->layanan->nama }}
+                                </td>
+                                <td>
+                                    @if ($data->status == 'proses')
+                                        <span class="badge badge-warning"> {{ $data->status }} </span>
+                                    @elseif ($data->status == 'selesai')
+                                        <span class="badge badge-success"> {{ $data->status }} </span>
+                                    @endif
+                                </td>
+                                <td>
+                                    {{ $data->created_at }}
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

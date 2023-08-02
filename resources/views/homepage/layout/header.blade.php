@@ -23,20 +23,20 @@
                                         <ul>
                                             <li class="active"><a href="#">Beranda</a>
                                                 <ul>
-                                                    <li class="active"><a href="index.html">Home 1</a></li>
-                                                    <li><a href="index2.html">Home 2</a></li>
+                                                    {{-- <li class="active"><a href="index.html">Home 1</a></li> --}}
+                                                    {{-- <li><a href="index2.html">Home 2</a></li> --}}
                                                 </ul>
                                             </li>
                                             <!-- <li><a href="#features">Fitur</a></li> -->
-                                            <li><a href="#app">Layanan</a></li>
+                                            <li><a href="#features">Layanan</a></li>
                                             <!-- <li><a href="#app">App Screens</a></li> -->
                                             <li><a href="#pricing  ">Biaya</a></li>
-                                            <li><a href="#">Docs</a>
+                                            {{-- <li><a href="#">Docs</a>
                                                 <ul>
                                                     <li><a href="blog.html">Blog Posts</a></li>
                                                     <li><a href="blog-details.html">single Post</a></li>
                                                 </ul>
-                                            </li>
+                                            </li> --}}
                                             <li>
                                                 <a href="{{ route('guest.login') }}">Kerja Sama</a>
                                             </li>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-5 d-md-block d-none">
                         <div class="urgent-call text-right">
-                            <a href="#" class="btn">Get Carenmore</a>
+                            <a href="{{ route('download.apk') }}" class="btn">Get Carenmore</a>
                         </div>
                     </div>
                 </div>
